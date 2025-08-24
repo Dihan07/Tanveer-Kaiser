@@ -1,0 +1,623 @@
+@import"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200;1,600&display=swap";
+ @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        scroll-behavior: smooth;
+        font-family: 'Poppins', sans-serif;
+      }
+      :root {
+        --background: rgb(24, 24, 24);
+        --second-background: rgb(21, 21, 21);
+      }
+
+      body{
+        min-height: 100vh;
+        background-color: var(--background);
+      }
+
+      nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 2em 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(15, 15, 15, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+      }
+
+      ul{
+        display: flex;
+        align-items: center;
+        gap: 3em;
+      }
+
+     nav ul a{
+      color: white;
+      opacity: 0.8;
+    }
+      nav ul a:hover{
+        
+        transform: scale(1.2);
+        transition: 0.2s ease-in-out;
+      }
+
+      .logo{
+        font-size: 2em;
+        font-weight: 800;
+        opacity: 0.8;
+        transition: 0.2s ease-in-out;
+      }
+      .logo:hover{
+        opacity: 1;
+      }
+      .btn{
+        padding: 0.5em 1em;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border: 2px solid white;
+        border-radius: 0.5em;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+      .btn:hover{
+        background-color: white;
+        color: var(--background);
+      }
+
+      span{
+        background: #F2613F;
+        background-clip: text;
+        color: transparent;
+      }
+
+      #menu{
+        color: white;
+        font-size: 3em;
+        display: none;
+      }
+      section{
+        padding: 5% 15%;
+      }
+      #home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        color: white;
+      }
+
+      #home img{
+        width: 18vw;
+        border-radius: 55%;
+        margin-top: 3em;
+      }
+      .info-box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5em;
+        max-width: 800px;
+      }
+      .info-box h1{
+        font-size: 4em;
+        font-weight: 500;
+      }
+      .info-box h3{
+        font-size: 3em;
+        font-weight: 500;
+      }
+      .info-box p{
+        opacity: 0.7;
+        font-size: 1.2em;
+      }
+      .btn-box{
+        display: flex;
+        gap: 1em;
+      }
+      .btn-box .btn:nth-of-type(1){
+        background-color: white;
+        color: var(--background);
+      }
+      .btn-box .btn:nth-of-type(1):hover{
+        background-color: var(--background);
+        color: white;
+      }
+      .btn-box .btn:nth-of-type(2){
+        background-color: white;
+        color: var(--background);
+      }
+      .btn-box .btn:nth-of-type(2):hover{
+        background-color: var(--background);
+        color: white;
+      }
+
+      /* Social Icons in Home Section */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        margin-top: 0.5em;
+      }
+
+        .social-icons a {
+        color: white;
+        transition: 0.3s ease-in-out;
+        animation: heartbeat 2s infinite;
+      }
+
+      @keyframes heartbeat {
+        0% { transform: scale(1); }
+        20% { transform: scale(1.2); }
+        40% { transform: scale(1); }
+        60% { transform: scale(1.2); }
+        80% { transform: scale(1); }
+        100% { transform: scale(1); }
+      }
+
+
+      .social-icons i {
+        font-size: 3.5em;
+      }
+
+      /* Typing Effect */
+      .typing-text {
+        border-right: 2px solid #F2613F;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%, 50% { border-color: #F2613F; }
+        51%, 100% { border-color: transparent; }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .social-icons {
+          gap: 1em;
+        }
+
+        .social-icons i {
+          font-size: 3em;
+        }
+      }
+
+#about{
+    background-color: var(--second-background);
+}
+
+.about-box{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    color: white;
+}
+
+.about-box p{
+    font-size: 1.5em;
+    
+    opacity: 0.8;
+    
+}
+
+#skills {
+    background-color: var(--background);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 140px; /* Fixed width to accommodate wider names */
+}
+
+.skill-logo {
+    width: 120px;
+    height: 120px; /* Fixed height for uniform logo size */
+    object-fit: contain; /* Scale SVGs proportionally */
+    transition: transform 0.3s ease;
+}
+
+
+.skill-item:hover .skill-logo {
+    transform: scale(1.1) rotate(5deg);
+    
+}
+
+.skill-name {
+    font-size: 1.2em;
+    opacity: 0.8;
+    color: white;
+    margin: 0;
+    text-align: center; /* Ensure text is centered */
+}
+
+
+#projects {
+    background-color: var(--second-background);
+}
+
+.header {
+    text-align: center;
+    font-size: 4em;
+    margin: 0.5em 0;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.box {
+    border: 3px solid rgb(30, 30, 30); /* Dark, non-transparent border to define the box */
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1.5em;
+    gap: 1em;
+    color: white;
+    min-height: 400px; /* Ensure consistent height for boxes */
+    /* Shadow to emphasize elevation, blending with second-background */
+    box-shadow: 0 6px 15px var(--second-background), 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* Smooth transition for hover effects */
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-color: var(--background);
+}
+
+.box:hover {
+    border: 3px solid rgb(50, 50, 50); /* Slightly lighter but non-transparent border on hover */
+    opacity: 1;
+    /* Enhanced transform and shadow for stronger elevation effect */
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px var(--second-background), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.box img {
+    min-width: 20px;
+    border-radius: 0.2em;
+}
+
+.box h1 {
+    font-size: clamp(1.2em, 3vw, 1.6em);
+    text-align: center;
+    color: #83B4FF;
+    
+}
+
+.box p {
+    opacity: 0.8;
+    text-align: center;
+    flex-grow: 1; /* Push the button to the bottom */
+    font-size: 1.2em;
+    
+}
+
+.view-btn {
+    background-color: var(--second-background);
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    padding: 0.5em 1em; /* Reduced horizontal padding for smaller width */
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: auto; /* Align button at the bottom */
+    max-width: 120px; /* Limit button width */
+    align-self: center; /* Center button horizontally */
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 2px solid rgb(50, 50, 50);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: white; /* Turn white on hover */
+    color: rgb(49, 49, 49); /* Change text color for contrast */
+    border: none;
+}
+
+/*research*/
+
+#research {
+    background-color: var(--background);
+}
+
+.re-box {
+    background-color: var(--second-background);
+    border: 3px solid rgb(30, 30, 30);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 2em;
+    gap: 1em;
+    color: white;
+    box-shadow: 0 6px 15px var(--background), 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.re-box p:first-child:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.re-box p:first-child {
+    color: #83B4FF;
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+.re-box p {
+    font-size: 1.2em;
+    text-align: center; /* For Edge */
+    text-align-last: center;
+    opacity: 0.8;
+}
+
+.re-box:hover {
+    border: 3px solid rgb(50, 50, 50); /* Slightly lighter but non-transparent border on hover */
+    opacity: 1;
+    /* Enhanced transform and shadow for stronger elevation effect */
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px var(--background), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #F2613F;
+    margin-right: 2em; 
+}
+
+.pdf-icon {
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.pdf-icon i {
+    font-size: 2em;
+    line-height: 1;
+    
+}
+.pdf-link:hover {
+    transform: scale(1.1);
+}
+
+#contact{
+    background-color: var(--second-background);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+form .input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1em;
+}
+
+.input-box span{
+    font-size: 1.5em;
+}
+
+form input{
+    font-size: 1.3em;
+    padding: 1em 5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+}
+
+form input:focus{
+    background: rgb(229, 229, 229);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20em;
+    bottom: 0;
+    background-color: var(--background);
+    width: 100%;
+    padding: 5em 15%;
+}
+
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.col-box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.col-box i{
+    font-size: 2em;
+}
+.col-box span{
+    font-size: 1.2em;
+}
+
+.col-box span:hover{
+    transform: scale(1.1);
+}
+
+.col-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    max-width: 500px;   
+}
+
+
+@media(max-width:968px){
+    section{
+        padding: 8em 15%;
+    }
+    nav .btn{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0,0.9);
+        display: none;
+    }
+    .links a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+    }
+    .links.active{
+        display: block;
+    }
+
+    #home h1{
+        font-size: 4em;
+    }
+    #home h3{
+        font-size: 2em;
+    }
+    #home img{
+        width: 24vw;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #about h1{
+        font-size: 3em;
+    }
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.5em;
+    }
+
+    .skill-box {
+        font-size: 1.1em;
+        padding: 1.2em;
+    }
+
+    #skills {
+        padding: 5% 10%;
+    }
+}
+
+@media(max-width:768px){
+     #home h1{
+        font-size: 2em;
+    }
+    #home h3{
+        font-size: 1.5em;
+    }
+    #home p{
+        font-size: 1em;
+    }
+     #home img{
+        width: 32vw;
+    }
+
+    #about p{
+        font-size: 1em;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .skill-box {
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    #skills {
+        padding: 5% 5%;
+    }
+
+    .header {
+        font-size: 3em;
+    }
+
+    #projects .header{
+        font-size: 3em;
+    }
+
+    #contact .header{
+        font-size: 3em;
+    }
+
+    #contact .input-box span{
+        font-size: 1.2em;
+    }
+    .input-box input{
+        padding: 0.5em;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+    }
+
+    .re-box p{
+        font-size: 1em;
+    }
+
+   .col-box span{
+    font-size: 1em;
+}
+
+}
