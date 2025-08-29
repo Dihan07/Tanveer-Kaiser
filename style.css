@@ -1,5 +1,5 @@
 @import"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200;1,600&display=swap";
- @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
       * {
         margin: 0;
         padding: 0;
@@ -95,12 +95,14 @@
         gap: 2em;
         color: white;
       }
-
-      #home img{
+     #home img {
         width: 18vw;
         border-radius: 55%;
         margin-top: 3em;
-      }
+        box-shadow: 0 6px 15px rgba(242, 97, 63, 0.4), 0 2px 8px rgba(242, 97, 63, 0.2);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
       .info-box{
         display: flex;
         flex-direction: column;
@@ -207,7 +209,13 @@
 
 .about-box p{
     font-size: 1.5em;
-    
+    text-align: justify;
+    text-justify: inter-word; /* Better word spacing */
+    hyphens: auto; /* Allow hyphenation */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    word-break: break-word;
+    line-height: 1.6;
     opacity: 0.8;
     
 }
@@ -242,6 +250,7 @@
 
 .skill-item:hover .skill-logo {
     transform: scale(1.1) rotate(5deg);
+    
     
 }
 
@@ -365,53 +374,60 @@
     
 }
 
-.re-box p:first-child:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
 
 .re-box p:first-child {
-    color: #83B4FF;
+    color:#83B4FF;
     font-size: 1.5em;
-    opacity: 1;
+    opacity:1 ;
+    
 }
 
 .re-box p {
     font-size: 1.2em;
-    text-align: center; /* For Edge */
-    text-align-last: center;
+    text-align: left; /* For Edge */
+    text-align-last: left;
     opacity: 0.8;
+    
 }
 
 .re-box:hover {
     border: 3px solid rgb(50, 50, 50); /* Slightly lighter but non-transparent border on hover */
-    opacity: 1;
+    
     /* Enhanced transform and shadow for stronger elevation effect */
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 10px 25px var(--background), 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+.re-box p:last-child {
+    display: flex;
+    justify-content: left;
+    gap: 1rem; /* Adjust gap size as needed */
+}
+
 .pdf-link {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    color: #F2613F;
-    margin-right: 2em; 
-}
-
-.pdf-icon {
-    display: inline-flex;
-    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--second-background);
+    border: 2px solid rgb(50, 50, 50);
+    color: white;
+    
+    text-decoration: none;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
     
 }
 
-.pdf-icon i {
-    font-size: 2em;
-    line-height: 1;
-    
-}
 .pdf-link:hover {
-    transform: scale(1.1);
+    
+    background-color: white; /* Turn white on hover */
+    color: rgb(49, 49, 49); /* Change text color for contrast */
+    border: none;
+
+
 }
 
 #contact{
@@ -477,6 +493,7 @@ footer{
 }
 .col-box span{
     font-size: 1.2em;
+
 }
 
 .col-box span:hover{
