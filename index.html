@@ -8,6 +8,7 @@
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
 
@@ -107,6 +108,10 @@
                 <img src="assets\nodejs-1.svg" alt="Nodejs Logo" class="skill-logo">
                 <p class="skill-name">Node JS</p>
             </div>
+            <div class="skill-item">
+                <img src="langchain-color.svg" alt="langchain Logo" class="skill-logo">
+                <p class="skill-name">LangChain</p>
+            </div>
         </div>
     </section>
 
@@ -130,13 +135,20 @@
                   <p>Recognition of Bangla Hand written digits using transfer learning model</p>
                   <div class="view-btn" onclick="location.href='https://github.com/Dihan07/Bangla-Hand-Written-Digit-Recognition-';">View</div>
               </div>
-
+               <div class="box">
+                  <img src="pdfbot.png" alt="Tableau Project">
+                  <h1>PDF Chatbot</h1>
+                  <p>Developed an intelligent PDF chatbot using Google Gemini API and LangChain</p>
+                  <div class="view-btn" onclick="location.href='https://pdfchat-bot.streamlit.app/'">View</div>
+              </div>
               <div class="box">
                   <img src="tableau.png" alt="Tableau Project">
                   <h1>Tableau Project</h1>
                   <p>This Tableau Dashboard Provides insights into average ratings of various British airways on different metrics</p>
                   <div class="view-btn" onclick="location.href='https://public.tableau.com/app/profile/tanveer.kaiser/viz/AirwayReview_17516647776520/Dashboard1';">View</div>
               </div>
+
+            
           </div>
       </section>
 
@@ -160,32 +172,36 @@
     </section>
 
 
-    <section id="contact">
-      <h1 class="header"><span>Contact</span></h1>
+<section id="contact">
+  <h1 class="header"><span>Contact</span></h1>
 
-      <form action="#">
-        <div class="input-box">
-          <span>Full name</span>
-          <input type="text"  placeholder="Enter Your Full Name">
-        </div>
+  <form id="contactForm">
+    <div class="input-box">
+      <span>Full name</span>
+      <input type="text" id="fullName" placeholder="Enter Your Full Name" required>
+      <div class="error-message" id="nameError"></div>
+    </div>
 
-         <div class="input-box">
-          <span>Your Email</span>
-          <input type="text"  placeholder="Enter Your Email">
-        </div>
+     <div class="input-box">
+      <span>Your Email</span>
+      <input type="email" id="email" placeholder="Enter Your Email" required>
+      <div class="error-message" id="emailError"></div>
+    </div>
 
-        <div class="input-box">
-          <span>Your Message</span>
-          <input type="text"  placeholder="Enter Your Message">
-        </div>
+    <div class="input-box">
+      <span>Your Message</span>
+      <input type="text" id="message" placeholder="Enter Your Message" required>
+      <div class="error-message" id="messageError"></div>
+    </div>
 
-        <div class="btn">Submit</div>
-      </form>
-    </section>
+    <div class="btn" onclick="submitForm()">Submit</div>
+    <div class="success-message" id="successMessage"></div>
+  </form>
+</section>
 
     <footer>
 
-      <div class="col-lef">
+      <div class="col-left">
 
         <div class="col-box">
           <span><i class='bx  bxs-location'></i> </span>
@@ -204,8 +220,8 @@
 
       </div>
       <div class="col-right">
-        <span>Tanveer Kaiser</span>
-        <p>Trying to learn more everyday. Feel free to knock me
+        <span>Feel free to connect with me!</span>
+        <p>Always eager to collaborate and learn something new.
         </p>
     </footer>
     <script src="script.js"></script>

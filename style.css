@@ -275,7 +275,7 @@
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 2em;
 }
 
@@ -306,6 +306,7 @@
 
 .box img {
     min-width: 20px;
+    height: 180px;
     border-radius: 0.2em;
 }
 
@@ -465,6 +466,29 @@ form input:focus{
     background: rgb(229, 229, 229);
 }
 
+
+/* Add these styles to your existing CSS */
+
+/* Error and success messages */
+.error-message {
+    color: white;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    min-height: 1.2em; /* Prevents layout shift */
+}
+
+.success-message {
+    color: #388e3c;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 1em;
+    min-height: 1.2em; /* Prevents layout shift */
+}
+
+.input-error {
+    border: 2px solid wh#d32f2f !important;
+}
+
 footer{
     display: flex;
     align-items: center;
@@ -496,9 +520,6 @@ footer{
 
 }
 
-.col-box span:hover{
-    transform: scale(1.1);
-}
 
 .col-right{
     display: flex;
@@ -508,6 +529,14 @@ footer{
     max-width: 500px;   
 }
 
+.col-right span{
+    font-size: 1.2em;
+}
+
+
+.col-right p{
+    opacity: 0.8;
+}
 
 @media(max-width:968px){
     section{
